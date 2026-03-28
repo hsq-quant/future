@@ -1,0 +1,25 @@
+qwen:
+  model: "qwen2.5-7b-instruct"
+  api_key_env: "DASHSCOPE_API_KEY"
+  base_url: "https://dashscope.aliyuncs.com/compatible-mode/v1"
+  timeout_seconds: 60
+  prompt_version: "paper_appendix_a_v1_zh"
+
+training:
+  n_splits: 5
+  n_trials: 20
+  random_state: 42
+  task: "regression"
+
+artifacts:
+  scored_articles: "data/processed/iterations/2026-03-27-single-source-baseline/articles_scored.parquet"
+  weekly_model_table: "data/processed/iterations/2026-03-27-single-source-baseline/weekly_model_table.parquet"
+  predictions: "data/processed/iterations/2026-03-28-v1-regression/weekly_predictions.parquet"
+  strategy: "data/processed/iterations/2026-03-28-v1-regression/weekly_strategy.parquet"
+  strategy_metrics: "reports/iterations/2026-03-28-v1-regression/strategy_metrics.parquet"
+  strategy_report: "reports/iterations/2026-03-28-v1-regression/strategy_report.md"
+  strategy_scenarios: "reports/iterations/2026-03-28-v1-regression/strategy_scenarios.parquet"
+  strategy_regimes: "reports/iterations/2026-03-28-v1-regression/strategy_regimes.parquet"
+  summary_report: "reports/iterations/2026-03-28-v1-regression/summary.md"
+  cv_metrics: "reports/iterations/2026-03-28-v1-regression/cv_metrics.parquet"
+  shap_dir: "reports/iterations/2026-03-28-v1-regression"

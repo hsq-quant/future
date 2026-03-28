@@ -1,0 +1,24 @@
+.DS_Store
+.pytest_cache/
+.pycache/
+__pycache__/
+*.pyc
+.mplconfig/
+.venv39/
+tmp/
+
+# Large local data and intermediate artifacts
+data/
+reports/*
+
+# Keep final reporting deliverables
+!reports/final/
+!reports/final/**
+
+# Optional local references
+*.parquet
+*.feather
+*.pickle
+
+# Large local source document
+Beyond Polarity: Multi-Dimensional LLM Sentiment Signals for WTI Crude Oil Futures Return Prediction - 2603.11408v2.pdf

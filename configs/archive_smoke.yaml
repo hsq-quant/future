@@ -1,0 +1,13 @@
+archive:
+  start_date: "2020-03-01"
+  end_date: "2020-03-20"
+  providers:
+    - name: "FinnewsHunter Smoke Sample"
+      type: "finnewshunter_local_export"
+      enabled: true
+      stop_on_success: true
+      params:
+        retrieval_method: "finnewshunter_local"
+        source_type: "archive"
+        query: "原油 OR 油价 OR 上海原油 OR OPEC OR 能源"
+        input_glob: "data/tmp/finnewshunter_smoke.parquet"

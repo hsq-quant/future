@@ -1,0 +1,140 @@
+archive:
+  start_date: "2019-12-25"
+  end_date: "2026-03-13"
+  allowed_language_prefixes: ["zh", "en"]
+  keyword_filters:
+    - "原油"
+    - "油价"
+    - "上海原油"
+    - "原油期货"
+    - "OPEC"
+    - "能源"
+    - "INE"
+    - "crude oil"
+    - "oil price"
+    - "oil prices"
+    - "opec+"
+    - "oil inventory"
+    - "oil inventories"
+    - "petroleum"
+    - "Brent"
+    - "WTI"
+    - "strategic petroleum reserve"
+  providers:
+    - name: "English Global Financial News"
+      type: "local_archive_files"
+      enabled: true
+      stop_on_success: false
+      params:
+        retrieval_method: "hf_financial_multisource_local"
+        source_type: "archive"
+        query: "crude oil OR oil price OR OPEC OR inventory OR WTI OR Brent"
+        input_glob: "data/raw/archive/english_global/*"
+        column_map:
+          title: "title"
+          body: "body"
+          summary: "summary"
+          published_at: "published_at"
+          url: "url"
+          source: "source"
+          language: "language"
+
+    - name: "Tushare Historical News"
+      type: "local_archive_files"
+      enabled: true
+      stop_on_success: false
+      params:
+        retrieval_method: "tushare_local"
+        source_type: "archive"
+        query: "原油 OR 油价 OR 上海原油 OR OPEC OR 能源"
+        input_glob: "data/raw/archive/tushare/*"
+        column_map:
+          title: "title"
+          body: "body"
+          summary: "summary"
+          published_at: "published_at"
+          url: "url"
+          source: "source"
+          language: "language"
+
+    - name: "AKShare Historical News"
+      type: "local_archive_files"
+      enabled: true
+      stop_on_success: false
+      params:
+        retrieval_method: "akshare_local"
+        source_type: "archive"
+        query: "原油 OR 油价 OR 上海原油 OR OPEC OR 能源"
+        input_glob: "data/raw/archive/akshare/*"
+        column_map:
+          title: "title"
+          body: "body"
+          summary: "summary"
+          published_at: "published_at"
+          url: "url"
+          source: "source"
+          language: "language"
+
+    - name: "Public News Datasets"
+      type: "local_archive_files"
+      enabled: true
+      stop_on_success: false
+      params:
+        retrieval_method: "public_dataset"
+        source_type: "archive"
+        query: "原油 OR 油价 OR 上海原油 OR OPEC OR 能源"
+        input_glob: "data/raw/archive/public_datasets/*"
+        column_map:
+          title: "title"
+          body: "body"
+          summary: "summary"
+          published_at: "published_at"
+          url: "url"
+          source: "source"
+          language: "language"
+
+    - name: "FinnewsHunter Local Export"
+      type: "finnewshunter_local_export"
+      enabled: true
+      stop_on_success: true
+      params:
+        retrieval_method: "finnewshunter_local"
+        source_type: "archive"
+        query: "原油 OR 油价 OR 上海原油 OR OPEC OR 能源"
+        input_glob: "data/raw/archive/finnewshunter/*"
+
+    - name: "CommonCrawl Local Dump"
+      type: "newsplease_local_dump"
+      enabled: true
+      stop_on_success: true
+      params:
+        retrieval_method: "newsplease_commoncrawl"
+        source_type: "archive"
+        query: "原油 OR 油价 OR 上海原油 OR OPEC OR 能源"
+        input_glob: "data/raw/archive/newsplease/*"
+        column_map:
+          title: "title"
+          body: "maintext"
+          summary: "description"
+          published_at: "date_publish"
+          url: "url"
+          source: "source_domain"
+          language: "language"
+
+    - name: "Local Archive Files"
+      type: "local_archive_files"
+      enabled: true
+      stop_on_success: true
+      params:
+        retrieval_method: "local_archive"
+        source_type: "archive"
+        query: "原油 OR 油价 OR 上海原油 OR OPEC OR 能源"
+        input_glob: "data/raw/archive/manual/*"
+        column_map:
+          title: "title"
+          body: "body"
+          summary: "summary"
+          published_at: "published_at"
+          url: "url"
+          source: "source"
+          language: "language"

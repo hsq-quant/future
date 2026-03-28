@@ -1,0 +1,55 @@
+sources:
+  - name: "CNStock"
+    enabled: true
+    domains:
+      - "www.cnstock.com"
+      - "cnstock.com"
+    priority: 1
+    notes: "Core source: strong Chinese market relevance and updated examples"
+
+  - name: "JRJ"
+    enabled: true
+    domains:
+      - "stock.jrj.com.cn"
+      - "jrj.com.cn"
+    priority: 2
+    notes: "Core source: large Chinese finance news volume"
+
+  - name: "NBD"
+    enabled: true
+    domains:
+      - "www.nbd.com.cn"
+      - "nbd.com.cn"
+    priority: 3
+    notes: "Core source: good business-news quality"
+
+  - name: "Sina Finance"
+    enabled: true
+    domains:
+      - "finance.sina.com.cn"
+    priority: 4
+    notes: "Core source: broad volume, use as the fourth main source"
+
+  - name: "Yicai"
+    enabled: true
+    domains:
+      - "www.yicai.com"
+      - "yicai.com"
+    priority: 5
+    notes: "Expansion source: better macro and energy-news quality if output is available"
+
+  - name: "Caixin"
+    enabled: true
+    domains:
+      - "www.caixin.com"
+      - "caixin.com"
+    priority: 6
+    notes: "Expansion source: high quality, use if historical output is available"
+
+  - name: "STCN"
+    enabled: false
+    domains:
+      - "www.stcn.com"
+      - "stcn.com"
+    priority: 99
+    notes: "Disabled by default because legacy notes say old crawler is no longer usable"

@@ -1,0 +1,40 @@
+strategy:
+  mode: "factor"
+  prediction_column: "pred_value"
+  factor_mapping:
+    method: "tanh"
+    scale: 0.5
+    k: 1.0
+  contract:
+    commission_per_lot: 40.0
+    tick_size: 0.1
+    contract_size: 1000.0
+  scenarios:
+    - name: "gross"
+      slippage_ticks: 0
+      apply_costs: false
+    - name: "realistic_0tick"
+      slippage_ticks: 0
+      apply_costs: true
+    - name: "realistic_1tick"
+      slippage_ticks: 1
+      apply_costs: true
+    - name: "realistic_2tick"
+      slippage_ticks: 2
+      apply_costs: true
+  regimes:
+    - regime: "Recovery Bull"
+      start: "2021-01-22"
+      end: "2022-02-18"
+    - regime: "War Spike"
+      start: "2022-02-25"
+      end: "2022-06-24"
+    - regime: "Post-Spike Bear"
+      start: "2022-07-01"
+      end: "2023-06-30"
+    - regime: "OPEC-Supported Range"
+      start: "2023-07-07"
+      end: "2024-12-27"
+    - regime: "Oversupply Bear"
+      start: "2025-01-03"
+      end: "2026-03-13"

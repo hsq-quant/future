@@ -1,0 +1,28 @@
+feeds:
+  - name: "Caixin Latest"
+    source_type: "finance"
+    language: "zh"
+    enabled: true
+    url: "https://rss.hirenyi.com/caixin/latest"
+  - name: "CLS Depth"
+    source_type: "finance"
+    language: "zh"
+    enabled: true
+    url: "https://rss.hirenyi.com/cls/depth"
+  - name: "Jin10 Important"
+    source_type: "finance"
+    language: "zh"
+    enabled: true
+    url: "https://rss.hirenyi.com/jin10/important"
+
+energy_keywords:
+  - "原油"
+  - "油价"
+  - "上海原油"
+  - "INE"
+  - "能源"
+  - "库存"
+  - "OPEC"
+  - "炼厂"
+  - "供应"
+  - "需求"

@@ -1,0 +1,33 @@
+[project]
+name = "ine-sc-rss-sentiment"
+version = "0.1.0"
+description = "INE SC weekly RSS sentiment prediction pipeline"
+requires-python = ">=3.11"
+dependencies = [
+  "akshare",
+  "beautifulsoup4",
+  "cnexchcal",
+  "feedparser",
+  "jieba",
+  "lightgbm",
+  "matplotlib",
+  "numpy",
+  "news-please",
+  "opencc-python-reimplemented",
+  "optuna",
+  "pandas",
+  "pyarrow",
+  "pydantic",
+  "pyyaml",
+  "requests",
+  "scikit-learn",
+  "seaborn",
+  "shap",
+  "tenacity",
+  "tushare",
+  "trafilatura",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

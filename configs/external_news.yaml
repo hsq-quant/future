@@ -1,0 +1,49 @@
+external_news:
+  start_date: "2019-12-30"
+  end_date: "2026-03-13"
+
+  tushare:
+    enabled: true
+    output_dir: "data/raw/archive/tushare"
+    batch_days: 120
+    keyword_filters:
+      - "原油"
+      - "油价"
+      - "上海原油"
+      - "原油期货"
+      - "INE"
+      - "OPEC"
+      - "库存"
+    news:
+      enabled: true
+      sources:
+        - "sina"
+        - "eastmoney"
+        - "10jqka"
+        - "cls"
+        - "yicai"
+        - "wallstreetcn"
+      limit_per_call: 1500
+    major_news:
+      enabled: true
+      sources:
+        - "新浪财经"
+        - "东方财富"
+        - "同花顺"
+        - "财联社"
+        - "第一财经"
+        - "华尔街见闻"
+      limit_per_call: 400
+
+  akshare:
+    enabled: true
+    output_dir: "data/raw/archive/akshare"
+    keywords:
+      - "原油"
+      - "上海原油"
+      - "原油期货"
+
+  public_datasets:
+    enabled: true
+    input_glob: "data/raw/public_datasets/*"
+    output_dir: "data/raw/archive/public_datasets"

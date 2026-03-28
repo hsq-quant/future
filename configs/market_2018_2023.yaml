@@ -1,0 +1,14 @@
+market:
+  source: "akshare"
+  start_date: "2018-03-26"
+  end_date: "2023-12-31"
+  exchange: "INE"
+  roll_days_before_last_trade: 5
+  local_input_glob: "data/raw/ine/*.csv"
+  contract_metadata_file: "data/raw/ine/contract_metadata.csv"
+  processed_output: "data/processed/iterations/2026-03-28-window-2018-2023/weekly_labels.parquet"
+  news_lookback_days: 7
+
+calendar:
+  source: "cnexchcal"
+  timezone: "Asia/Shanghai"

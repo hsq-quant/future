@@ -1,0 +1,25 @@
+feeds:
+  - name: "OilPrice Main"
+    source_type: "energy"
+    language: "en"
+    enabled: true
+    url: "https://oilprice.com/rss/main"
+
+energy_keywords:
+  - "crude oil"
+  - "oil price"
+  - "oil prices"
+  - "opec"
+  - "opec+"
+  - "oil inventory"
+  - "oil inventories"
+  - "crude inventory"
+  - "crude inventories"
+  - "petroleum"
+  - "strategic petroleum reserve"
+  - "brent"
+  - "wti"
+  - "refinery"
+  - "refineries"
+  - "oil demand"
+  - "oil supply"
