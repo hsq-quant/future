@@ -2,6 +2,21 @@
 
 Weekly news-sentiment research pipeline for INE crude oil futures (`SC`).
 
+## Reference paper and timeliness
+
+This project is directly inspired by a very recent arXiv working paper:
+
+- **Beyond Polarity: Multi-Dimensional LLM Sentiment Signals for WTI Crude Oil Futures Return Prediction**
+- Authors: Dehao Dai, Ding Ma, Dou Liu, Kerui Geng, Yiqing Wang
+- arXiv: [`2603.11408`](https://arxiv.org/abs/2603.11408)
+- Submitted: **March 2026**
+
+Why this matters:
+
+- The paper is extremely recent, which gives this project strong topical relevance.
+- Its main contribution is to move beyond simple polarity and construct five LLM-based sentiment dimensions for weekly crude oil futures prediction.
+- Our project adapts that framework from WTI to **INE SC**, and extends it with both classification and regression pipelines plus trading-layer experiments.
+
 ## What it does
 
 - builds a continuous `SC` near-month series
